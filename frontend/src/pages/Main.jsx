@@ -3,6 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 import Loader from "../components/Loader";
 import Error from "../components/Error";
 import Card from "../components/Card";
+import Hero from "../components/Hero";
 
 const Main = () => {
   const { data, error, isLoading, refetch } = useQuery({
@@ -12,7 +13,7 @@ const Main = () => {
 
   return (
     <div className="px-5 md:px-10">
-      <h2>HERO</h2>
+      <Hero />
 
       {isLoading ? (
         <Loader />
